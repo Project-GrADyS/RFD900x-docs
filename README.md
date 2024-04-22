@@ -34,8 +34,17 @@ This project aims to test configurations for multipoint connections using RFD900
 
 | RFD |  |  |  |  |  |  |  |  |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Test | Day | frequency | Airspeed | NodeCount |TXPower | Duty Cicle | Serial Speed | Firmware | Status |
-| Vôo 1 | 15/10 | 922000 - 928000 | 125 | 4 | 30 | 40:followed(NodeID3) - 40:repeater(NodeID1) - 10:follower(NodeID4) - 10:GS(NodeID2) | 115 | https://files.rfdesign.com.au/Files/firmware/RFD900x2-MultipointRelease_V3.00MP.gbl |  |
+| Test | Day | frequency | Airspeed | NodeCount |TXPower | Duty Cicle(NodeID) | Serial Speed | Firmware | Status |
+| Vôo 1 | 15/10 | 902000 - 928000 | 125 | 4 | 30 | 20(NodeID1) 50(NodeID2) 30(NodeID3) 40(NodeID4) | 115 | https://files.rfdesign.com.au/Files/firmware/RFD900x2-MultipointRelease_V3.00MP.gbl |  |
+
+## NodeID SYSID Reference
+
+| NodeID SYSID Reference | | | |
+| --- | --- | --- | --- |
+| Vehicle | Mode | SYSID | NodeID |
+| GS | repeater | - | 1 |
+| Drone | followed | 20 | 2 |
+| Drone | follower | 15 | 3 |
 
 ## In Mavproxy
 
